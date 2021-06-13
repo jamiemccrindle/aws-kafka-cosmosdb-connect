@@ -27,7 +27,7 @@ RUN mkdir -p /usr/share/man/man1 /usr/share/man/man2
 
 RUN apt-get update && \
 apt-get install -y --no-install-recommends \
-        openjdk-11-jre
+        openjdk-11-jre kafkacat
 
 # Setting the ENTRYPOINT to docker-init.sh will configure non-root access 
 # to the Docker socket. The script will also execute CMD as needed.
