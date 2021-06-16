@@ -1,0 +1,16 @@
+{
+  "name": "cosmosdb-sink-connector",
+  "config": {
+    "connector.class": "com.azure.cosmos.kafka.connect.sink.CosmosDBSinkConnector",
+    "tasks.max": "1",
+    "topics": "users",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "connect.cosmos.connection.endpoint": "https://<insert name here>.documents.azure.com:443/",
+    "connect.cosmos.master.key": "<insert master key here>",
+    "connect.cosmos.databasename": "connect",
+    "connect.cosmos.containers.topicmap": "users#users"
+  }
+}

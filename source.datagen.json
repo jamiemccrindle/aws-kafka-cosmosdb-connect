@@ -1,0 +1,13 @@
+{
+  "name": "users-datagen",
+  "config": {
+    "name": "users-datagen",
+    "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "kafka.topic": "users",
+    "max.interval": "5000",
+    "iterations": "100",
+    "quickstart": "users"
+  }
+}
